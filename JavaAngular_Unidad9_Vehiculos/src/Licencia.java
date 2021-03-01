@@ -1,11 +1,11 @@
-/**
- * 
- */
+
 
 /**
  * @author Cesar Torrelles, Ingrid Dominguez, Vyacheslav Khaydorov
  *
  */
+
+//creamos una clase llamada "licencia" para almacenar los datos de las licencias de los conductores
 public class Licencia {
 	
 	//Atributos
@@ -13,6 +13,7 @@ public class Licencia {
 	protected String tipo;
 	protected String nombreCompleto;
 	protected String fechaCaducidad;
+	
 	
 	//Constructor
 	public Licencia(int IDlicencia, String tipo, String nombreCompleto, String fechaCaducidad) {
@@ -56,6 +57,7 @@ public class Licencia {
 	}
 
 	@Override
+	//creamos un toString de esta clase para poder imprimir los datos de la Licencia
 	public String toString() {
 		return "Licencia [ID=" + IDlicencia + ", tipo=" + tipo + ", nombreCompleto=" + nombreCompleto + ", fechaCaducidad="
 				+ fechaCaducidad + "]";

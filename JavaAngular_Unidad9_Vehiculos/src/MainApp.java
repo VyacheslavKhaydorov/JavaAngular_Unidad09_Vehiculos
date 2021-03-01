@@ -1,6 +1,5 @@
-/**
- * 
- */
+
+
 
 import java.util.ArrayList;
 
@@ -12,13 +11,18 @@ public class MainApp {
 
 	public static void main(String[] args) {
 		
-		//Capturamos personas por teclado
+		// Con este metodo "CapturaDatosPersonas" introduciremos los datos de las personas 
+		// y lo guardaremos en la ArrayList "Listapersonas" con el tipo de objeto "persona"  
 		ArrayList<Persona> listaPersonas = Metodos.CapturaDatosPersonas();
 		
-		//Creacion de vehiculos y personas
+		
+		//En este metodo realizaremos la creacion de vehiculos y personas
+		// y lo guardaremos en la ArrayList "ListaVehiculos" con el tipo de objeto "Vehiculo"
 		ArrayList<Vehiculo> listaVehiculos = Metodos.CapturaDatosVehiculos(listaPersonas);
 		
-		//Imprimimos ambos
+		
+		
+		//Imprimimos ambos Arraylist
 		Metodos.ImprimirPersonas(listaPersonas);
 		Metodos.ImprimirVehiculos(listaVehiculos);
 

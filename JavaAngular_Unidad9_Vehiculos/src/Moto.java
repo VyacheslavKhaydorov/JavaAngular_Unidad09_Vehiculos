@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 
 /**
@@ -8,23 +9,29 @@ import java.util.ArrayList;
  * @author Cesar Torrelles, Ingrid Dominguez, Vyacheslav Khaydorov
  *
  */
+
+//creamos otra sub-clase de "vehiculo" llamada "Moto"
 public class Moto extends Vehiculo {
+	
+	
 	//Atributos
 	protected String marcaRuedaD;
 	protected double diametroRuedaD;
 	protected String marcaRuedaT;
 	protected double diametroRuedaT; 
 	
-	//Constantes
-	protected double diametroRuedaD_DEF = 0;
-	protected double diametroRuedaT_DEF = 0;
+	//Constantes, diametros por defecto
+	protected double diametroRuedaD_DEF = 0.5;
+	protected double diametroRuedaT_DEF = 0.5;
 	
 	//Constructor
 	public Moto(String matricula, String marca, String color, Titular titular, ArrayList<Persona> listaConductoresVehiculo, String marcaRuedasD, double diametroRuedaD, String marcaRuedaT, double diametroRuedaT) {
 		super(matricula, marca, color, titular, listaConductoresVehiculo);
 		this.marcaRuedaD = marcaRuedasD;
-		this.diametroRuedaD = Metodos.comprobarDiametroRuedasD(diametroRuedaD, diametroRuedaD_DEF);;
 		this.marcaRuedaT = marcaRuedaT;
+		//en el constructor "diametroRuedasD" y "diametroRuedasT" comprobaremos si el diametro se encuentra dentro de los margenes establecidos
+		// en caso contrario se asignara un diametro por defecto
+		this.diametroRuedaD = Metodos.comprobarDiametroRuedasD(diametroRuedaD, diametroRuedaD_DEF);
 		this.diametroRuedaT = Metodos.comprobarDiametroRuedasT(diametroRuedaT, diametroRuedaT_DEF);
 	}
 
@@ -62,10 +69,11 @@ public class Moto extends Vehiculo {
 	}
 
 	@Override
+	//creamos un toString de esta clase para poder imprimir los datos en el objeto "Coche"
 	public String toString() {
-		return "Moto [Matricula=" + getMatricula() + ", Marca=" + getMarca() + ", Color=" + getColor() + "\n" + titular
-				+ "\nmarcaRuedasD=" + marcaRuedaD + ", diametroRuedasD="
-				+ diametroRuedaD + ", marcaRuedasT=" + marcaRuedaT + ", diametroRuedasT=" + diametroRuedaT + "]";
+		return "Moto [ Matricula: " + getMatricula() + ", Marca: " + getMarca() + ", Color: " + getColor() + "\n" + titular
+				+ "\nmarcaRuedasD: " + marcaRuedaD + ", diametroRuedasD: "
+				+ diametroRuedaD + ", marcaRuedasT: " + marcaRuedaT + ", diametroRuedasT: " + diametroRuedaT + " ]";
 	}
 
 	

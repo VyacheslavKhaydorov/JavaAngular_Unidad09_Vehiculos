@@ -1,17 +1,19 @@
-/**
- * 
- */
+
 
 /**
  * @author Cesar Torrelles, Ingrid Dominguez, Vyacheslav Khaydorov
  *
  */
-public class Titular extends Persona{
-	//Atributos
-	private boolean seguro;
-	private boolean garaje;
 
-	//Constructor
+//creamos una sub-clase  de "Persona", llamada "Titular"
+public class Titular extends Persona{
+	
+	
+	//Atributos
+	protected boolean seguro;
+	protected boolean garaje;
+
+	//Constructor: en este objeto recogemos varios datos heredados de "persona" y añadimos los atributos "seguro" y "garaje"
 	public Titular(String nombre, String apellidos, String fechaNacimiento, Licencia licencia, boolean seguro, boolean garaje) {
 		super(nombre, apellidos, fechaNacimiento, licencia);
 		this.seguro = seguro;
@@ -36,9 +38,10 @@ public class Titular extends Persona{
 	}
 
 	@Override
+	//creamos un toString de esta clase para poder imprimir los datos del Titular
 	public String toString() {
-		return "Titular [nombre=" + nombre + ", apellidos=" + apellidos + ", fechaNacimiento=" + fechaNacimiento
-				+ ", licencia=" + licencia + ", seguro=" + seguro + ", garaje=" + garaje + "]";
+		return "Titular [ nombre: " + nombre + ", apellidos: " + apellidos + ", fecha de nacimiento: " + fechaNacimiento
+				+ ", licencia: " + licencia + ", seguro: " + seguro + ", garaje: " + garaje + " ]";
 	}
 
 }

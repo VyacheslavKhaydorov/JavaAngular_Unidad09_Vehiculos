@@ -1,19 +1,22 @@
-/**
- * 
- */
+
 
 /**
  * @author Cesar Torrelles, Ingrid Dominguez, Vyacheslav Khaydorov
  *
  */
+
+//creamos una super clase llamada Persona 
+
 public class Persona {
-	//Atributos
-	protected String nombre;
+	
+	
+	//Añadimos sus Atributos
+	public String nombre;
 	protected String apellidos;
 	protected String fechaNacimiento;
 	protected String licencia;
 	
-	//Constructor
+	//Añadimos el Constructor
 	public Persona(String nombre, String apellidos, String fechaNacimiento, Licencia licencia) {
 		this.nombre = nombre;
 		this.apellidos = apellidos;
