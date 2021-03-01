@@ -18,11 +18,12 @@ CC21_REUS_JavaAngular_2
 
 Repositorio de los ejercicios:
 ```
-https://github.com/cesar-torrelles/UD9-M3
+https://github.com/VyacheslavKhaydorov/JavaAngular_Unidad09_Vehiculos
 ```
 ###   3. Lista de herramientas para poder ejecutarlo:
 ```
-Eclipse 2020-06
+JDK 15.0.2
+Eclipse Version: 2020-12 (4.18.0)
 ```
 ###  4. Screenshot imagen que indique cómo debe verse el proyecto.
 ![banerGit](https://github.com/cesar-torrelles/UD9-M3/blob/main/M3.png)
